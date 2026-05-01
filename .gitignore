@@ -1,0 +1,16 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# NLTK (VERY IMPORTANT)
+nltk_data/
+AppData/
+~/AppData/
+
+# Data files
+*.csv
+*.ipynb
+
+# OS
+.DS_Store

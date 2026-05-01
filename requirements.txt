@@ -1,0 +1,11 @@
+flask
+flask-cors
+pandas
+scikit-learn
+nltk
+matplotlib
+seaborn
+wordcloud
+joblib
+numpy
+gunicorn

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SentimentAI — AI Sentiment Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div class="page-shell">
+        <nav class="navbar">
+            <div class="brand">
+                <div class="logo-circle">S</div>
+                <span>SentimentAI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#analyzer">Analyze</a>
+                <a href="#features">Features</a>
+            </div>
+        </nav>
+
+        <header class="hero" id="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">AI Sentiment Analysis</p>
+                <h1>AI Sentiment Analyzer for fast, trusted decisions</h1>
+                <p class="hero-text">Transform customer feedback, reviews, and text into instant sentiment insights with a premium web experience.</p>
+                <a class="primary-btn" href="#analyzer">Try the demo</a>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card glass-card">
+                    <div class="card-header">
+                        <span>Realtime sentiment prediction</span>
+                        <strong>Fast response</strong>
+                    </div>
+                    <div class="card-body">
+                        <p>Type any movie review, product comment or short feedback and get instant analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="analyzer-section" id="analyzer">
+                <div class="section-heading">
+                    <span class="section-label">Sentiment Analyzer</span>
+                    <h2>Analyze text in seconds</h2>
+                </div>
+                <div class="analyzer-grid">
+                    <div class="analyzer-card glass-card">
+                        <div class="card-title">Enter text</div>
+                        <textarea id="reviewInput" placeholder="Enter your text here..."></textarea>
+                        <div class="button-row">
+                            <button id="analyzeButton" class="primary-btn">Analyze sentiment</button>
+                            <button id="clearButton" class="secondary-btn">Clear</button>
+                        </div>
+                    </div>
+
+                    <div class="result-card glass-card">
+                        <div class="result-header">
+                            <div>
+                                <p class="result-label">Prediction</p>
+                                <h3 id="predictionText">No analysis yet</h3>
+                            </div>
+                            <div id="resultEmoji" class="result-emoji">🌐</div>
+                        </div>
+                        <div class="result-meta">
+                            <p class="meta-title">Confidence</p>
+                            <p id="confidenceText">--%</p>
+                        </div>
+                        <div class="status-panel" id="statusPanel"></div>
+                        <div class="action-row">
+                            <button id="copyButton" class="ghost-btn" disabled>Copy result</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-panel glass-card">
+                    <div class="history-header">
+                        <h3>Recent history</h3>
+                        <small>Saved locally in your browser</small>
+                    </div>
+                    <div id="historyList" class="history-list">
+                        <p class="empty-state">No history yet. Submit a prediction to populate history.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features-section" id="features">
+                <div class="section-heading">
+                    <span class="section-label">Why SentimentAI</span>
+                    <h2>Built for modern teams and real-world feedback.</h2>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card glass-card">
+                        <span class="feature-icon">⚡</span>
+                        <h3>Fast prediction</h3>
+                        <p>Analyze text instantly with an optimized Flask API and lightweight TF-IDF pipeline.</p>
+                    </article>
+                    <article class="feature-card glass-card">
+                        <span class="feature-icon">🧠</span>
+                        <h3>AI powered</h3>
+                        <p>Leverages machine learning to understand sentiment and deliver consistent results.</p>
+                    </article>
+                    <article class="feature-card glass-card">
+                        <span class="feature-icon">✨</span>
+                        <h3>Clean interface</h3>
+                        <p>Professional, SaaS-grade UI with modern glassmorphism and smooth motion.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

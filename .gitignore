@@ -14,3 +14,5 @@ AppData/
 
 # OS
 .DS_Store
+data/
+*.csv

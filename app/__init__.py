@@ -1,6 +1,6 @@
 import logging
 from flask import Flask
-from flask_cors import CORS
+from flask_cors import CORS # type: ignore
 
 
 def create_app():
